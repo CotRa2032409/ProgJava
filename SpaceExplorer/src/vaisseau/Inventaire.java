@@ -7,9 +7,10 @@ import java.util.List;
 
 public class Inventaire {
 
-    protected List<Objets> objets =new ArrayList<Objets>();
+    protected List<Objets> objets = new ArrayList<>();
 
-    public void ajouterObjets(Objets objet){
+
+    public void ajouterObjets(Objets objet) {
         objets.add(objet);
     }
 
