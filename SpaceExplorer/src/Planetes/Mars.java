@@ -14,7 +14,7 @@ public class Mars extends Planete {
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
-        vaisseau.setEssence(vaisseau.getEssence() - 250);
+        vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(250));
         for (objets.Objets listeObjet : listeObjets) {
             vaisseau.getInventaire().ajouterObjets(listeObjet);
         }

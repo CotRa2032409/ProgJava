@@ -14,6 +14,15 @@ public class SpaceExplorer extends Inventaire {
         inventaire = new Inventaire();
     }
 
+    public int calculEssence(int essence) {
+        if (isMoteurUtilise())
+            return essence / 2;
+        else
+            return essence;
+
+
+    }
+
 
     public int getVie() {
         return vie;
@@ -54,4 +63,6 @@ public class SpaceExplorer extends Inventaire {
     public void setMoteurUtilise(boolean moteurUtilise) {
         this.moteurUtilise = moteurUtilise;
     }
+
+
 }

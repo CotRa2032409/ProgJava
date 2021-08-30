@@ -16,11 +16,7 @@ public class Mercure extends Planete{
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
-        if (vaisseau.isMoteurUtilise()) {
-            vaisseau.setEssence(vaisseau.getEssence() - 75);
-        }
-        else
-            vaisseau.setEssence(vaisseau.getEssence() - 150);
+        vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(300));
 
         for (objets.Objets listeObjet : listeObjets) {
             vaisseau.getInventaire().ajouterObjets(listeObjet);

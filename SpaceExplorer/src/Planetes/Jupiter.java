@@ -20,11 +20,7 @@ public class Jupiter extends Planete {
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
-        if (vaisseau.isArmeUtilisee()) {
-            vaisseau.setEssence(vaisseau.getEssence() - 175);
-        }
-        else
-            vaisseau.setEssence(vaisseau.getEssence() - 350);
+        vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(350));
 
         for (objets.Objets listeObjet : listeObjets) {
             vaisseau.getInventaire().ajouterObjets(listeObjet);

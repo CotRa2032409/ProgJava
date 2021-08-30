@@ -20,7 +20,7 @@ public class Saturne extends Planete{
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
-        vaisseau.setEssence(vaisseau.getEssence() - 400);
+        vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(400));
         for (Objets listeObjet : listeObjets) {
             vaisseau.getInventaire().ajouterObjets(listeObjet);
         }

@@ -23,7 +23,7 @@ public class Terre extends Planete {
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
-        vaisseau.setEssence(vaisseau.getEssence() - 200);
+        vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(200));
         for (objets.Objets listeObjet : listeObjets) {
             vaisseau.getInventaire().ajouterObjets(listeObjet);
         }
