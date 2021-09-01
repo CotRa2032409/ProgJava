@@ -23,6 +23,7 @@ public class Main {
                     3. Utiliser un objet dans l’inventaire
                     4. Revenir en arrière""");
             choix = sc.nextInt();
+
             System.out.println("Votre choix : " + choix);
             switch (choix) {
                 case 1: {

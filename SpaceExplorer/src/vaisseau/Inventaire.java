@@ -9,7 +9,6 @@ public class Inventaire {
 
     protected List<Objets> objets = new ArrayList<>();
 
-
     public void ajouterObjets(Objets objet) {
         objets.add(objet);
     }

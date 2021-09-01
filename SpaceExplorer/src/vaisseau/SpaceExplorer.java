@@ -10,7 +10,7 @@ public class SpaceExplorer extends Inventaire {
 
     public SpaceExplorer() {
         vie = 100;
-        essence = 1500;
+        essence = 1000;
         inventaire = new Inventaire();
     }
 
@@ -19,8 +19,6 @@ public class SpaceExplorer extends Inventaire {
             return essence / 2;
         else
             return essence;
-
-
     }
 
 

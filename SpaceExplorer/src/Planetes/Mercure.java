@@ -4,24 +4,32 @@ import objets.Arme;
 import objets.Molette;
 import vaisseau.SpaceExplorer;
 
-public class Mercure extends Planete{
+import java.util.ArrayList;
+
+public class Mercure extends Planete {
+
+    private Pirates pirates;
 
     public Mercure() {
         setNom("Mercure");
-        setNature(false);
-        setPirates(true);
+        listeObjets = new ArrayList<>();
         listeObjets.add(new Molette());
         listeObjets.add(new Arme());
     }
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
+        int resultat = 0;
         vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(300));
 
-        for (objets.Objets listeObjet : listeObjets) {
-            vaisseau.getInventaire().ajouterObjets(listeObjet);
+        for (int i = 0; i < listeObjets.size(); i++) {
+            vaisseau.getInventaire().ajouterObjets(listeObjets.get(i));
+            System.out.println("Bravo tu as obtenu : " + listeObjets.get(i));
         }
 
+        if (resultat >= 65) {
+            pirates.attaquer();
+        }
 
     }
 }

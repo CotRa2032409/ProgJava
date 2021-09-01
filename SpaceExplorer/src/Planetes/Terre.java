@@ -10,12 +10,12 @@ import java.util.ArrayList;
 
 public class Terre extends Planete {
 
+    private Pirates pirates;
+
     public Terre() {
         setNom("Terre");
-        setNature(true);
-        setPirates(false);
         listeObjets = new ArrayList<>();
-        listeObjets.add(new Moteur());
+
         listeObjets.add(new Molette());
         listeObjets.add(new Essence());
         listeObjets.add(new Credits());
@@ -23,10 +23,16 @@ public class Terre extends Planete {
 
     @Override
     public void explorer(SpaceExplorer vaisseau) {
+        int resultat = 0;
         vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(200));
-        for (objets.Objets listeObjet : listeObjets) {
-            vaisseau.getInventaire().ajouterObjets(listeObjet);
+        if (resultat >= 75)
+            listeObjets.add(new Moteur());
+        for (int i = 0; i < listeObjets.size(); i++) {
+            vaisseau.getInventaire().ajouterObjets(listeObjets.get(i));
+            System.out.println("Bravo tu as obtenu : " + listeObjets.get(i));
         }
-
+        if (resultat >= 65) {
+            pirates.attaquer();
+        }
     }
 }
