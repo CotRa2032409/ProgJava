@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Terre extends Planete {
 
-    private Pirates pirates;
+    private Pirates pirates = new Pirates();
 
     public Terre() {
         setNom("Terre");
@@ -25,6 +25,7 @@ public class Terre extends Planete {
     public void explorer(SpaceExplorer vaisseau) {
         int resultat = 0;
         vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(200));
+        resultat = (int) (Math.random() * 100);
         if (resultat >= 75)
             listeObjets.add(new Moteur());
         for (int i = 0; i < listeObjets.size(); i++) {

@@ -21,7 +21,7 @@ public class Mercure extends Planete {
     public void explorer(SpaceExplorer vaisseau) {
         int resultat = 0;
         vaisseau.setEssence(vaisseau.getEssence() - vaisseau.calculEssence(300));
-
+        resultat = (int) (Math.random() * 100);
         for (int i = 0; i < listeObjets.size(); i++) {
             vaisseau.getInventaire().ajouterObjets(listeObjets.get(i));
             System.out.println("Bravo tu as obtenu : " + listeObjets.get(i));

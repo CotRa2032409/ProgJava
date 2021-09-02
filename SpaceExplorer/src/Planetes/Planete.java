@@ -10,9 +10,6 @@ public abstract class Planete {
     ArrayList<Objets> listeObjets;
     protected String nom;
 
-    public Planete() {
-
-    }
 
     public abstract void explorer(SpaceExplorer vaisseau);
 

@@ -2,7 +2,7 @@ package Planetes;
 
 import vaisseau.SpaceExplorer;
 
-public class Pirates {
+public class Pirates extends SpaceExplorer{
 
     private SpaceExplorer vaisseau;
 
